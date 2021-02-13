@@ -1,0 +1,437 @@
+/* настройка клиентской части */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#root{
+  height: 100vh;
+}
+body{
+  background: linear-gradient(to right, #990000, #020002);
+  min-height: 100vh;
+}
+.backgroundImage{
+  position: absolute;
+  top: 15px;
+  right: 0px;
+  z-index: 1;
+}
+.logo{
+  filter: grayscale(100%);
+  opacity: 0.2;
+  z-index:0;
+  height: 95vh;
+} 
+.container{
+  width: 100vw;
+  margin: 0 auto;
+  z-index: 2;
+  position: relative;
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+  width: 100vw;
+}
+.inputField{
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-left: 20px;
+  width: 45vw;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 10px;
+  border: #22031e;
+  background-color: #f8ebdb;
+  opacity: 1;
+}
+:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
+}
+.cards{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+.imgUrl{
+  height: 50vh;
+  margin: 0 0 10px 0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5); 
+}
+.lastNames{
+  margin: 20px 0 30px 10px;
+  width: 45vw;
+  height: 65vh;
+  font-size: 30px;
+  text-align: center;
+  color: #af8144;
+  opacity: 1;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+.lastName{
+  cursor: pointer;
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+  margin-right: 10px;
+  width: 45vw;
+  height: 60vh;
+  font-size: 20px;
+  text-align: center;
+  color: #af8144;
+  opacity: 0;
+}
+.info h1{
+  margin: 10px 0 10px 0;
+}
+.info h3{
+  margin: 0 0 10px 0;
+}
+.sertificate-btn{
+  height: 50px;
+  width: 250px;
+  background: linear-gradient(to right, #990000, #020002);
+  border-radius: 10px;
+  border: solid 0;
+  color: #af8144;
+  font-size: 20px;
+  cursor: pointer;
+}
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px 10px 20px;
+}
+.line{
+  width: 45vw;
+  size: 1px;
+  color: #f8ebdb;
+}
+.footer img{
+  width: 60px;
+  height: 60px;
+}
+.footer a{
+  cursor: pointer;
+}
+.form{
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 900px;
+  height: 400px;
+  background-color: white;
+  opacity: 0.97;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+	left: 50%;
+	margin-left: -450px;
+  margin-top: -200px;
+}
+.fioField, .emailField{
+  width: 500px;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 10px;
+  border: #22031e;
+  margin: 20px;
+  background-color: #e1e1e1;
+}
+.dateField{
+  width: 300px;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 10px;
+  border: #22031e;
+  margin: 10px;
+  background-color: #e1e1e1;
+  cursor: pointer;
+}
+.formBtn, .viewBtn{
+  width: 300px;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 10px;
+  border: #22031e;
+  margin: 10px;
+  background-color: #e1e1e1;
+  cursor: pointer;
+}
+.formBtn:hover{
+  background-color: #c7c6c6;
+}
+.viewBtn:hover{
+  background-color: #c7c6c6;
+}
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+  cursor: pointer;
+  }
+  .close:hover {
+  opacity: 1;
+  }
+  .close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+  }
+  .close:before {
+  transform: rotate(45deg);
+  }
+  .close:after {
+  transform: rotate(-45deg);
+  }
+
+/* настройка вида превью сертификата */
+.preView{
+  width: 500px;
+  height: 600px;
+  background-color: white;
+  opacity: 0.97;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+	left: 50%;
+	margin-left: -250px;
+  margin-top: -300px;
+}
+
+.preSertificate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../img/pre-sertificate-for-laptop.png");
+  width: 450px;
+  height: 550px;
+  position: absolute;
+  top: 50%;
+	left: 50%;
+	margin-left: -225px;
+  margin-top: -275px;
+}
+.pre-title{
+  color: #ffc124;
+  font-size: 35px;
+  margin-top: 15px;
+}
+.pre-flagForPdf{
+  width: 110px;
+  height: 140px;
+  margin: 15px 0 10px 0;
+}
+.pre-firstString, .pre-secondString, .pre-thirdString{
+  color:white;
+  font-size: 16px;
+  margin-top: 15px;
+}
+.pre-fio{
+  color:white;
+  font-size: 25px;
+  margin: 15px 0 0px 0;
+}
+.pre-familyName, .pre-familyFlag{
+  color:white;
+  font-size: 25px;
+  margin-top: 15px;
+}
+.pre-datePdf{
+  color:white;
+  font-size: 22px;
+  margin-top: 60px;
+}
+
+.pre-close {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  opacity: 0.3;
+  cursor: pointer;
+  }
+  .pre-close:hover {
+  opacity: 1;
+  }
+  .pre-close:before, .pre-close:after {
+  position: absolute;
+  left: 5px;
+  content: ' ';
+  height: 20px;
+  width: 2px;
+  background-color: #333;
+  }
+  .pre-close:before {
+  transform: rotate(45deg);
+  }
+  .pre-close:after {
+  transform: rotate(-45deg);
+  }
+/* настройка админки */
+.admin{
+  height: 90vh;
+}
+.adminList{
+  display: flex;
+  justify-content: space-between;
+}
+.sertificate li{
+   margin: 3px;
+}
+.sertificate h3{
+  color: black;
+  padding: 10px;
+}
+.sertificate button{
+  padding: 2px;
+  margin: 5px;
+}
+.admin h1{
+  color:white;
+  margin: 10px 10px 30px 10px;
+}
+.adminPage{
+  display: flex;
+  width: 100%;
+}
+.sertificate{
+  width: 50vw;
+  background-color: white;
+  margin: 0 10px 0 10px;
+  height: 80vh;
+  overflow: auto;
+}
+.functional{
+  width: 49vw;
+  height: 80vh;
+  margin-right: 10px;
+}
+.pdfToPrint{
+  display: none;
+}
+.print{
+  width: 100px;
+  height: 60px;
+  border-radius: 10px;
+  margin-left: 20px;
+  cursor: pointer;
+  background-color: white;
+}
+.cleanering{
+  display: flex;
+  flex-direction: column;
+  margin-top: 150px;
+}
+.clear{
+  width: 150px;
+  height: 60px;
+  border-radius: 10px;
+  margin-left: 20px;
+  cursor: pointer;
+  background-color: white;
+}
+.autoclear{
+  width: 150px;
+  height: 60px;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.calendar{
+  width: 160px;
+  height: 60px;
+  border-radius: 10px;
+  margin-left: 20px;
+  padding: 0 10px 0 10px;
+}
+.formation{
+  cursor: pointer;
+}
+.admin-search-box{
+  margin: 0 0 50px 20px;
+}
+.admin-search{
+  width: 400px;
+  height: 50px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 10px;
+  border: #22031e;
+}
+/* настройка отображения фамилий в админке */
+.selectingNow{
+  background-color: lime;
+}
+.notSelected{
+  background-color: white;
+}
+.printed{
+  background-color: yellow;
+}
+
+/* настройка вида PDF документа */
+.pdf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../img/sertificate.png");
+  width: 2479px;
+  height: 3490px;
+}
+.title{
+  color: #ffc124;
+  font-size: 250px;
+  margin-top: 100px;
+}
+.flagForPdf{
+  width: 790px;
+  height: 1000px;
+  margin: 50px 0 70px 0;
+}
+.firstString, .secondString, .thirdString{
+  color:white;
+  font-size: 100px;
+  margin-top: 50px;
+}
+.fio{
+  color:white;
+  font-size: 140px;
+  margin: 70px 0 70px 0;
+}
+.familyName, .familyFlag{
+  color:white;
+  font-size: 120px;
+  margin-top: 50px;
+}
+.datePdf{
+  color:white;
+  font-size: 120px;
+  margin-top: 380px;
+}
+
